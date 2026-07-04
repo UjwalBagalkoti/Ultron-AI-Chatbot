@@ -1,0 +1,13 @@
+SpeechRecognition==3.14.3
+pyttsx3==2.90
+pyaudio
+wikipedia
+flask==3.1.0
+flask-cors==5.0.0
+google-genai>=1.0.0
+psutil>=6.0.0
+requests>=2.32.0
+python-dotenv  
+pipwin
+pyaudio
+
