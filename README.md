@@ -36,7 +36,7 @@ Ultron/
 
 1. **Clone and enter the project**
    ```bash
-   git clone <your-repo-url>
+   git clone <https://github.com/UjwalBagalkoti/Ultron-AI-Chatbot>
    cd Ultron
    ```
 
