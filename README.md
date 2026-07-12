@@ -11,7 +11,7 @@ A personal assistant with two interfaces: a **voice-controlled desktop CLI** (`u
 - **AI fallback**: any command that doesn't match a built-in rule is sent to Gemini (`gemini-2.5-flash`) with a persona prompt so responses stay in character
 - **Logging**: all commands and responses are logged to `logs/application.log`
 
-## Tech Stack
+## Tech Stack 
 
 - **Backend**: Python, Flask, Flask-CORS
 - **AI**: Google Gemini API (`google-genai`)
