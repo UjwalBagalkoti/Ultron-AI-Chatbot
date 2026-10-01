@@ -2,6 +2,10 @@
 
 A personal assistant with two interfaces: a **voice-controlled desktop CLI** (`ultron.py`) and a **web dashboard** (`app.py`, Flask) styled after Marvel's Ultron. It handles everyday commands — time, weather, jokes, quotes, Wikipedia lookups, opening apps/websites, basic math — and falls back to **Google Gemini** for open-ended questions, answered in character.
 
+#Live
+
+https://ultron-ai-chatbot.onrender.com/?utm_source=chatgpt.com
+
 ## Features
 
 - **Two run modes**
