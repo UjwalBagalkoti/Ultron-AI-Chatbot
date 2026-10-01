@@ -2,9 +2,11 @@
 
 A personal assistant with two interfaces: a **voice-controlled desktop CLI** (`ultron.py`) and a **web dashboard** (`app.py`, Flask) styled after Marvel's Ultron. It handles everyday commands — time, weather, jokes, quotes, Wikipedia lookups, opening apps/websites, basic math — and falls back to **Google Gemini** for open-ended questions, answered in character.
 
-#Live
+# 🌐 Live Demo
 
-https://ultron-ai-chatbot.onrender.com/?utm_source=chatgpt.com
+https://ultron-ai-chatbot.onrender.com/
+
+> The Render deployment hosts the Flask web version. Browser voice features use the Web Speech API where supported.
 
 ## Features
 
@@ -19,7 +21,8 @@ https://ultron-ai-chatbot.onrender.com/?utm_source=chatgpt.com
 
 - **Backend**: Python, Flask, Flask-CORS
 - **AI**: Google Gemini API (`google-genai`)
-- **Voice**: `SpeechRecognition`, `pyttsx3`, `pyaudio`
+- **Browser voice**: Web Speech API
+- **Desktop voice**: `SpeechRecognition`, `pyttsx3`, `pyaudio`
 - **System monitoring**: `psutil`
 - **Frontend**: HTML/CSS/JS (dashboard UI in `templates/index.html`)
 
@@ -40,8 +43,8 @@ Ultron/
 
 1. **Clone and enter the project**
    ```bash
-   git clone <https://github.com/UjwalBagalkoti/Ultron-AI-Chatbot>
-   cd Ultron
+   git clone https://github.com/UjwalBagalkoti/Ultron-AI-Chatbot.git
+   cd Ultron-AI-Chatbot
    ```
 
 2. **Create a virtual environment and install dependencies**
@@ -51,6 +54,8 @@ Ultron/
    # source venv/bin/activate  # macOS/Linux
    pip install -r requirements.txt
    ```
+
+   > The cloud `requirements.txt` intentionally excludes desktop audio packages such as PyAudio. Install `SpeechRecognition`, `pyttsx3`, and `pyaudio` separately if you want to run `ultron.py` locally.
 
 3. **Set up your API key**
    Copy `.env.example` to `.env` and add your own Gemini API key:
@@ -72,6 +77,17 @@ Ultron/
    ```bash
    python ultron.py
    ```
+
+## 🚀 Render Deployment
+
+The web app can be deployed with:
+
+```bash
+pip install -r requirements.txt
+gunicorn app:app
+```
+
+Set `GEMINI_API_KEY` as a Render environment variable. The desktop voice CLI should not be deployed to Render because it depends on local microphone/audio and OS capabilities.
 
 ## Notes
 
