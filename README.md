@@ -58,11 +58,8 @@ Ultron/
    > The cloud `requirements.txt` intentionally excludes desktop audio packages such as PyAudio. Install `SpeechRecognition`, `pyttsx3`, and `pyaudio` separately if you want to run `ultron.py` locally.
 
 3. **Set up your API key**
-   Copy `.env.example` to `.env` and add your own Gemini API key:
-   ```bash
-   cp .env.example .env
-   ```
-   ```
+   Set the Gemini API key in your environment:
+   ```text
    GEMINI_API_KEY=your_gemini_api_key_here
    ```
    Get a key from [Google AI Studio](https://aistudio.google.com/).
